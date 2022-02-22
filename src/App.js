@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import Header from './components/Header/Header';
+import Icons from './components/Icons/Icons';
+
+export default class App extends Component {
+
+  state = {
+    win: 0,
+    lose: 0
+  };
+
+  render() {
+    return (
+      <div className="wrapper">
+        <Header name='Камень - Ножницы - Бумага'>
+          <div className="result">
+            <h3>Побед: {this.state.win}</h3>
+            <h3>Поражений: {this.state.lose}</h3>
+          </div>
+        </Header>
+        <Icons/>
+      </div>
+    )
+  }
 }
 
-export default App;
