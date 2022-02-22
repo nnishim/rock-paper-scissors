@@ -1,0 +1,10 @@
+.icon{
+	border: 1px solid #000;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
